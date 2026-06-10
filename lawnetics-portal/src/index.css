@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c0ccdf; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #1a3a72; }
+
+/* ── Fonts ── */
+@layer base {
+  html { font-size: 15px; scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; }
+}
+
+/* ── Custom utilities ── */
+@layer utilities {
+  .sidebar-gradient { background: linear-gradient(180deg, #12192c 0%, #1c2538 100%); }
+  .login-gradient   { background: linear-gradient(145deg, #070c1a 0%, #0b1428 45%, #091840 100%); }
+  .org-gradient     { background: linear-gradient(135deg, #e85020 0%, #c04010 100%); }
+  .navy-gradient    { background: linear-gradient(135deg, #0d2045 0%, #1c2538 100%); }
+  .glass-card       { background: rgba(255,255,255,.04); backdrop-filter: blur(24px); }
+  .animate-fadeUp   { animation: fadeUp 0.25s ease forwards; }
+  .animate-bounceIn { animation: bounceIn 0.5s ease forwards; }
+  .animate-slideLeft{ animation: slideLeft 0.25s ease forwards; }
+  .topbar-accent::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+}
+
+/* ── Stat card accent top border ── */
+.stat-org::after    { background: linear-gradient(90deg,#e85020,#f07040); }
+.stat-cyan::after   { background: linear-gradient(90deg,#00aadd,#1a3a72); }
+.stat-gold::after   { background: linear-gradient(90deg,#c89b30,#e0b040); }
+.stat-green::after  { background: linear-gradient(90deg,#1a7a4a,#2ecc71); }
+.stat-navy::after   { background: linear-gradient(90deg,#0d2045,#1a3a72); }
+.stat-red::after    { background: linear-gradient(90deg,#c0392b,#e74c3c); }
+.stat-purple::after { background: linear-gradient(90deg,#7c3aed,#9f67ff); }
+
+/* ── Folder tree mono ── */
+.ft-dir  { color: #86efac; }
+.ft-sym  { color: rgba(255,255,255,.22); }
+.ft-file { color: #fde68a; }
+.ft-cyan { color: #7dd3fc; }
+
+/* ── Drive file hover ── */
+.file-row:hover .file-actions { opacity: 1; }
+
+/* ── Calendar cell ── */
+.cal-cell { min-height: 68px; }
